@@ -11,7 +11,7 @@ def weight_cal():
             weight *= 0.453592
         elif unit_w == "k":
             weight = weight
-        print("Your weight is {:.2f} kg")
+        print("Your weight is {:.2f} kg".format(weight))
         return weight
     else:
         print("Please try again, thank you.")
@@ -29,7 +29,7 @@ def height_cal():
             height *= 0.3048
         elif unit_h == "m":
             height = height
-        print("Your height is {:.2f} m")
+        print("Your height is {:.2f} m".format(height))
         return height
     else:
         print("Please try again, thank you.")
@@ -39,7 +39,7 @@ def bmi_cal(weight,height):
     print("\nYour body mass index (BMI) is {:.2f}".format(bmi))
     
 def bmi_category(bmi):
-    print("Disclaimer: The BMI categories are prescribed here for an average adult. The program is under still constructrion to make it useful for all ages")
+    print("Disclaimer: The BMI categories are prescribed here for an average adult. The program is still under construction to make it useful for all ages.")
     if bmi<16:
         print("Severe Thinness")
     elif bmi<17:
