@@ -1,8 +1,12 @@
 def weight_cal():
     '''
-    To define your weight in SI Units to calculate BMI
-    Input(s): By User through prompt
-    Output(s): Weight in kilogram
+    To define your weight in SI Units to calculate BMI.
+
+    Input(s):
+        By User through prompt
+
+    Returns:
+        Weight in kilogram
     '''
     unit_w = input("Is your weight in kilograms or pounds? Please enter k or p: ")
     if unit_w == "p" or unit_w == "k":
@@ -18,9 +22,13 @@ def weight_cal():
 
 def height_cal():
     '''
-    To define your height in SI Units to calculate BMI
-    Input(s): By User through prompt
-    Output(s): Height in metre
+    To define your height in SI Units to calculate BMI.
+
+    Input(s):
+        By User through prompt
+
+    Returns:
+        Height in metre
     '''
     unit_h = input("Is your height in centimeters or feet? Please enter m or ft: ")
     if unit_h == "m" or unit_h == "ft":
@@ -35,10 +43,29 @@ def height_cal():
         print("Please try again, thank you.")
 
 def bmi_cal(weight,height):
+    '''
+    To calculate your BMI from your height and weight.
+
+    Args:
+        weight (float): weight returned by weight_cal()
+        height (float): height returned by height_cal()
+
+    Returns:
+        BMI in kg/m^2
+    '''
     bmi = weight/(height**2)
     print("\nYour body mass index (BMI) is {:.2f}".format(bmi))
     
 def bmi_category(bmi):
+    '''
+    To identify weight range based on BMI.
+
+    Args:
+        bmi (float): bmi returned by bmi_cal()
+
+    Returns:
+        Your weight class
+    ''' 
     print("Disclaimer: The BMI categories are prescribed here for an average adult. The program is still under construction to make it useful for all ages.")
     if bmi<16:
         print("Severe Thinness")
